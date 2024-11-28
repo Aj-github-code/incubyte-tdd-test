@@ -13,4 +13,8 @@ describe('Calculator', () => {
     test("Handle Multiple numbers!", () => {
         expect(add('1,3,2,5')).toBe(11);
     });
+
+    test("Handle new lines using delimeters!", () => {
+        expect(add('1\n2,5')).toBe(8);
+    });
 });
