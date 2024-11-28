@@ -21,4 +21,8 @@ describe('Calculator', () => {
     test("Handle custom delimeters!", () => {
         expect(add('//;\n1;2;5')).toBe(8);
     });
+
+    test("Handle negative numbers", () => {
+        expect(add('-1,2,-5')).toEqual('Negative numbers not allowed: -1, -5');
+    });
 });
