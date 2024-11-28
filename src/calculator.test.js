@@ -17,4 +17,8 @@ describe('Calculator', () => {
     test("Handle new lines using delimeters!", () => {
         expect(add('1\n2,5')).toBe(8);
     });
+
+    test("Handle custom delimeters!", () => {
+        expect(add('//;\n1;2;5')).toBe(8);
+    });
 });
